@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <link rel="icon" href="https://s1.328888.xyz/2022/07/28/DYPCE.png" sizes="16x16">
+    <title>幕昕的个人主页</title>
+    <style type="text/css"> 
+        body{
+        background-image: url("https://s1.328888.xyz/2022/07/28/DYhpC.jpg");
+        background-size: 100% ;
+        }
+        #nav {
+        margin: 50px auto;
+        height: 40px;
+        }         
+        #nav ul {
+        list-style: none;
+        margin-left: 50px;
+        }           
+        #nav li {
+        display: inline;                
+        }           
+        #nav a {
+        line-height: 40px;
+        color: #fff;
+        text-decoration: none;
+        padding: 20px 20px;
+        }           
+        #nav a:hover {
+        background-color: rgb(20, 71, 75);
+        }
+        body {
+        font-family: Arial;
+        }
+
+        * {
+        box-sizing: border-box;
+        }
+
+        form.example input[type=text] {
+        padding: 6px;
+        font-size: 17px;
+        border: 1px solid grey;
+        float: left;
+        width: 95%;
+        }
+
+        form.example button { 
+        float: left;
+        width: 5%;
+        padding: 5px;
+        background: #2196F3;
+        color: white;
+        font-size: 17px;
+        border: 1px solid grey;
+        border-left: none;
+        cursor: pointer;
+        }
+
+        form.example button:hover {
+        background: #0b7dda;
+        }
+
+        form.example::after {
+        content: "";
+        clear: both;
+        display: table;
+        }
+    </style>
+  </head>
+   <body>
+    <script type="text/javascript">
+      var imgs=["https://s1.328888.xyz/2022/07/28/DYhpC.jpg","https://s1.328888.xyz/2022/07/28/DnFjr.jpg","https://img1.imgtp.com/2022/07/28/n2fdWsui.jpg","https://s1.328888.xyz/2022/07/28/Dn9Jo.jpg"];
+      var index;
+      function qiehuan(){
+          index=Math.floor(Math.random()*imgs.length);
+          console.log(index);
+          document.body.style.backgroundImage="url("+imgs[index]+")";
+      }
+      setInterval("qiehuan()",15000);
+    </script>
+
+    <div style="padding: 0px; color:#979797"><p style="text-align: left;">此站开发：幕昕</p><p style="text-align: right;">背景源于网络</div>
+    <div style="text-align: center; padding: 12px"></div>
+    <script>
+      Date.prototype.format = function (fmt) {
+          var o = {
+              "y+": this.getFullYear, //年
+              "M+": this.getMonth() + 1, //月份
+              "d+": this.getDate(), //日
+              "h+": this.getHours(), //小时
+              "m+": this.getMinutes(), //分
+              "s+": this.getSeconds() //秒
+          };
+          if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+          for (var k in o)
+              if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+          return fmt;
+      }
+      setInterval("document.getElementById('dateTime').innerHTML = (new Date()).format('yyyy-MM-dd hh:mm:ss');", 1000);
+  </script>
+  <div id="dateTime"style="text-align: center"></div>
+
+    <ul id="nav"style="text-align: center">
+        <li><a href="https://mxmain.github.io/mx/homepage.html">首页</a></li>
+        <li><a href="#">介绍</a></li>
+        <li><a href="#">好游推荐</a></li>
+        <li><a href="#">相关网站</a></li>
+        <li><a href="#">关于此页</a></li>
+        <li><a href="#">联系作者</a></li>
+        <li><a href="#">作者视频号</a></li> 
+       </ul>
+    <footer style="
+    margin-top: 60px;
+    text-align: center;
+    padding: 40px;
+    font-size: 12px;
+  ">
+  <p style="color: #666">Copyright © mx homepage.com</p>
+  <p style="color: #666">如侵权或文件丢失、网页报错请联系我们</p>
+</footer>
+  </body>
+</html>
