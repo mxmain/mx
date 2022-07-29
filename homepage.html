@@ -10,6 +10,10 @@
         body{
         background-image: url("https://s1.328888.xyz/2022/07/28/DYhpC.jpg");
         background-size: 100% ;
+        background-position: center center; 
+	      background-repeat: no-repeat; 
+	      background-attachment: fixed;
+	      background-size: cover; 
         -webkit-transition: all 1s linear; transition: all 1s linear
         }
         #nav {
@@ -103,6 +107,31 @@
       setInterval("document.getElementById('dateTime').innerHTML = (new Date()).format('yyyy-MM-dd hh:mm:ss');", 1000);
   </script>
   <div id="dateTime"style="text-align: center"></div>
+  <div id="he-plugin-simple"></div>
+  <script>
+  WIDGET = {
+    "CONFIG": {
+      "modules": "01234",
+      "background": "5",
+      "tmpColor": "FFFFFF",
+      "tmpSize": "16",
+      "cityColor": "FFFFFF",
+      "citySize": "16",
+      "aqiColor": "FFFFFF",
+      "aqiSize": "16",
+      "weatherIconSize": "24",
+      "alertIconSize": "18",
+      "padding": "5px 5px 5px 5px",
+      "shadow": "0",
+      "language": "auto",
+      "fixed": "false",
+      "vertical": "center",
+      "horizontal": "center",
+      "key": "66b883dff4ec4361ad4fea446d6a0adb"
+    }
+  }
+  </script>
+  <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
 
     <ul id="nav"style="text-align: center">
         <li><a href="https://mxmain.github.io/mx/homepage.html">首页</a></li>
