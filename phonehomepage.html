@@ -9,7 +9,11 @@
     <style type="text/css"> 
         body{
         background-image: url("https://s1.328888.xyz/2022/07/29/DWeCd.jpg");
-        background-size: 100% ;
+        background-size: 100% 100%;
+        background-position: center center; 
+	      background-repeat: no-repeat; 
+	      background-attachment: fixed;
+	      background-size: cover; 
         -webkit-transition: all 1s linear; transition: all 1s linear
         }
         #nav {
@@ -18,16 +22,15 @@
         }         
         #nav ul {
         list-style: none;
-        margin-left: 50px;
         }           
         #nav li {
         display: inline;                
         }           
         #nav a {
-        line-height: 40px;
+        line-height: 5px;
         color: #fff;
         text-decoration: none;
-        padding: 20px 20px;
+        padding: 2px 3px;
         }           
         #nav a:hover {
         background-color: rgb(20, 71, 75);
@@ -69,9 +72,65 @@
         clear: both;
         display: table;
         }
+        .shadow_css {
+		  	display: none;
+			  position: absolute;
+		  	top: 0%;
+		  	left: 0%;
+		  	width: 130%;
+			  height: 150%;
+		  	background-color: black;
+		  	z-index: 10;
+	  		-moz-opacity: 0.6;
+			  opacity: .60;
+		  	filter: alpha(opacity=66);
+	    	}
+		
+	    	.window_css {
+	  		display: none;
+	  		position: absolute;
+	  		top: 20%;
+        left:10%;
+	  		width: 80%;
+	  		height: 60%;
+	  		border: 3px solid rgb(255, 255, 255);
+	  		background-color: rgb(206, 206, 206);
+	  		z-index: 11;
+        border-radius: 15px 5px 25px;
+        background-image: url("https://s1.328888.xyz/2022/07/31/FCZah.jpg");
+        background-size:370px 600px;
+        background-size: cover; 
+        background-position: center left; 
+	      background-repeat: no-repeat; 
+        -webkit-transition: all 1s linear; transition: all 1s linear;
+	    	}
+        a:link {
+        color:#e9dada;
+        text-decoration:underline;
+        }
+        a:active {
+        color:#000000;
+        text-decoration:none;
+        }
+        a:hover {
+        color:#747474;
+        text-decoration:none;
+        }
     </style>
   </head>
    <body>
+    <script>
+      if((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+      window.location.href = "https://mxmain.github.io/mx/phonehomepage.html";   //手机
+      } else {
+      window.location.href = "https://mxmain.github.io/mx/homepage.html";        //电脑
+      }
+      if((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+      alert('您正在通过手机访问');
+      } else {
+      alert("您在PC端访问");
+      }
+    </script>
     <script type="text/javascript">
       var imgs=["https://s1.328888.xyz/2022/07/29/DWeCd.jpg","https://s1.328888.xyz/2022/07/29/DWrxU.jpg","https://s1.328888.xyz/2022/07/29/DWHiB.jpg","https://s1.328888.xyz/2022/07/29/DWqhR.png","https://s1.328888.xyz/2022/07/29/DWYX6.png"];
       var index;
@@ -81,9 +140,9 @@
           document.body.style.backgroundImage="url("+imgs[index]+")";
       }
       setInterval("qiehuan()",11000);
-    </script>
+  </script>
 
-    <div style="padding: 0px; color:#979797"><p style="text-align: left;">此站开发：幕昕</p><p style="text-align: right;">背景源于网络/Tap</div>
+    <div style="padding: 0px; color:#979797"><p style="text-align: right;font-size: 10px">背景源于网络</div>
     <div style="text-align: center; padding: 12px"></div>
     <script>
       Date.prototype.format = function (fmt) {
@@ -103,16 +162,58 @@
       setInterval("document.getElementById('dateTime').innerHTML = (new Date()).format('yyyy-MM-dd hh:mm:ss');", 1000);
   </script>
   <div id="dateTime"style="text-align: center"></div>
+  <div id="he-plugin-simple"></div>
+  <script>
+  WIDGET = {
+    "CONFIG": {
+      "modules": "01234",
+      "background": "5",
+      "tmpColor": "FFFFFF",
+      "tmpSize": "16",
+      "cityColor": "FFFFFF",
+      "citySize": "16",
+      "aqiColor": "FFFFFF",
+      "aqiSize": "16",
+      "weatherIconSize": "24",
+      "alertIconSize": "18",
+      "padding": "5px 5px 5px 5px",
+      "shadow": "0",
+      "language": "auto",
+      "fixed": "false",
+      "vertical": "center",
+      "horizontal": "center",
+      "key": "66b883dff4ec4361ad4fea446d6a0adb"
+    }
+  }
+  </script>
+  <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
 
     <ul id="nav"style="text-align: center">
         <li><a href="https://mxmain.github.io/mx/homepage.html">首页</a></li>
         <li><a href="#">介绍</a></li>
         <li><a href="#">好游推荐</a></li>
-        <li><a href="#">相关网站</a></li>
-        <li><a href="#">关于此页</a></li>
         <li><a href="#">联系作者</a></li>
-        <li><a href="#">作者视频号</a></li> 
+        <li><a href="javascript:void(0)" onclick="displayWindow()">赞助作者</a></li> 
        </ul>
+    <div id="window" class="window_css">
+      <div style="text-align: center;margin-top:100%;padding:5%"><a>打开微信扫码</a></div>
+      <div style="text-align: center;"><p>"您的打赏就是我前进的动力"</p></div>
+      <div style="text-align: center;font-size: 35px;margin-top: 10%;padding: 10%;">
+        <a style="text-decoration: none" href="javascript:void(0)" onclick="hideWindow()">⨉</a></div>
+         </div>
+        <div id="shadow" class="shadow_css"></div>
+        <script>
+          function displayWindow() {
+            document.getElementById("window").style.display = "block";
+            document.getElementById("shadow").style.display = "block";
+          }
+      
+          function hideWindow() {
+            document.getElementById("window").style.display = "none";
+            document.getElementById("shadow").style.display = "none";
+          }
+        </script>
+        <div style="padding:220px"></div>
     <footer style="
     margin-top: 60px;
     text-align: center;
