@@ -9,7 +9,7 @@
     <style type="text/css"> 
         body{
         background-image: url("https://s1.328888.xyz/2022/07/28/DYhpC.jpg");
-        background-size: 100% ;
+        background-size: 100%;
         background-position: center center; 
 	      background-repeat: no-repeat; 
 	      background-attachment: fixed;
@@ -120,6 +120,18 @@
     </style>
   </head>
    <body>
+    <script>
+      if((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+      window.location.href = "https://mxmain.github.io/mx/phonehomepage.html";   //手机
+      } else {
+      window.location.href = "https://mxmain.github.io/mx/homepage.html";        //电脑
+      }
+      if((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+      alert('您正在通过手机访问');
+      } else {
+      alert("您在PC端访问");
+      }
+    </script>
     <script type="text/javascript">
       var imgs=["https://s1.328888.xyz/2022/07/28/DYhpC.jpg","https://s1.328888.xyz/2022/07/28/DnFjr.jpg","https://img1.imgtp.com/2022/07/28/n2fdWsui.jpg","https://s1.328888.xyz/2022/07/28/Dn9Jo.jpg","https://s1.328888.xyz/2022/07/29/FlPaN.jpg"];
       var index;
@@ -186,7 +198,7 @@
         <li><a href="#">联系作者</a></li>
         <li><a href="javascript:void(0)" onclick="displayWindow()">赞助作者</a></li> 
        </ul>
-       <div id="window" class="window_css">
+    <div id="window" class="window_css">
       <div style="text-align: center;margin-top:90%;padding:5%"><a>打开微信扫码</a></div>
       <div style="text-align: center;"><p>"您的打赏就是我前进的动力"</p></div>
       <div style="text-align: center;font-size: 35px;margin-top: 10%;padding: 10%;">
